@@ -9,7 +9,29 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            
+            ContentView()
+                .tabItem ({
+                    Image(systemName: "house.fill")
+                    Text("Home")
+                })
+            
+            FullCoinView()
+                .tabItem({
+                   Image(systemName: "crown")
+                    Text("Crypto")
+                })
+            
+            TwitterView()
+                .tabItem({
+                   Image(systemName: "globe.americas.fill")
+                    Text("Twitter")
+                })
+            
+            
+            
+        }
     }
 }
 

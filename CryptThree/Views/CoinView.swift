@@ -8,13 +8,42 @@
 import SwiftUI
 
 struct CoinView: View {
+    
+    let coin: CoinModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack(spacing: 0) {
+            
+            // Left Side
+            Text(coin.name)
+            
+            Spacer()
+            
+                .frame(width: 30, height: 30)
+            Text("(\(coin.symbol))".uppercased())
+                .font(.headline)
+                .padding(.leading, 6)
+                .foregroundColor(Color.black)
+            Spacer()
+            
+            //  Right side
+            VStack(alignment: .trailing) {
+                // Current Price 
+                Text(coin.currentPrice.asCurrencywithSixDecimals())
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.black)
+                
+                Text(coin.priceChange?.asPercentString() ?? "")
+                    .foregroundColor((coin.priceChange ?? 0) >= 0 ?
+                Color.green : Color.red)
+            }
+        }
     }
 }
 
 struct CoinView_Previews: PreviewProvider {
     static var previews: some View {
-        CoinView()
+        CoinView(coin: dev.coin)
+            .previewLayout(.sizeThatFits)
     }
 }
