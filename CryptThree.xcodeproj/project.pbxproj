@@ -20,6 +20,9 @@
 		66A1A52F2843A8E300E91012 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A1A52E2843A8E300E91012 /* HomeViewModel.swift */; };
 		66A1A5322843B25900E91012 /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A1A5312843B25900E91012 /* CoinDataService.swift */; };
 		66A1A5342844F29200E91012 /* TwitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A1A5332844F29200E91012 /* TwitterView.swift */; };
+		66A1A565284694D800E91012 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A1A564284694D800E91012 /* SearchView.swift */; };
+		66A1A5672846990B00E91012 /* StockVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A1A5662846990B00E91012 /* StockVM.swift */; };
+		66A799592847AF9E0068009F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A799582847AF9E0068009F /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		66A1A52E2843A8E300E91012 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		66A1A5312843B25900E91012 /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
 		66A1A5332844F29200E91012 /* TwitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterView.swift; sourceTree = "<group>"; };
+		66A1A564284694D800E91012 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		66A1A5662846990B00E91012 /* StockVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockVM.swift; sourceTree = "<group>"; };
+		66A799582847AF9E0068009F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,13 +75,14 @@
 		66A1A50F2841BD8C00E91012 /* CryptThree */ = {
 			isa = PBXGroup;
 			children = (
+				66A799572847AF0B0068009F /* Utilities */,
 				66A1A5302843B21A00E91012 /* Services */,
 				66A1A52D2843A8CC00E91012 /* ViewModels */,
 				66A1A526284241EE00E91012 /* Extensions */,
 				66A1A5212842413900E91012 /* Views */,
 				66A1A51E2841BDA200E91012 /* Models */,
-				66A1A5102841BD8C00E91012 /* CryptThreeApp.swift */,
 				66A1A5142841BD8F00E91012 /* Assets.xcassets */,
+				66A1A5102841BD8C00E91012 /* CryptThreeApp.swift */,
 				66A1A5162841BD8F00E91012 /* Preview Content */,
 			);
 			path = CryptThree;
@@ -105,6 +112,7 @@
 				66A1A5242842419D00E91012 /* CoinView.swift */,
 				66A1A52B2843A7E900E91012 /* FullCoinView.swift */,
 				66A1A5332844F29200E91012 /* TwitterView.swift */,
+				66A1A564284694D800E91012 /* SearchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -122,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				66A1A52E2843A8E300E91012 /* HomeViewModel.swift */,
+				66A1A5662846990B00E91012 /* StockVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -132,6 +141,14 @@
 				66A1A5312843B25900E91012 /* CoinDataService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		66A799572847AF0B0068009F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				66A799582847AF9E0068009F /* NetworkManager.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,11 +224,14 @@
 				66A1A5252842419D00E91012 /* CoinView.swift in Sources */,
 				66A1A52F2843A8E300E91012 /* HomeViewModel.swift in Sources */,
 				66A1A5132841BD8C00E91012 /* ContentView.swift in Sources */,
+				66A1A5672846990B00E91012 /* StockVM.swift in Sources */,
 				66A1A5342844F29200E91012 /* TwitterView.swift in Sources */,
+				66A1A565284694D800E91012 /* SearchView.swift in Sources */,
 				66A1A5282842420E00E91012 /* CoinExtension.swift in Sources */,
 				66A1A5232842414D00E91012 /* MainView.swift in Sources */,
 				66A1A52C2843A7E900E91012 /* FullCoinView.swift in Sources */,
 				66A1A5202841BDC400E91012 /* CoinModel.swift in Sources */,
+				66A799592847AF9E0068009F /* NetworkManager.swift in Sources */,
 				66A1A5112841BD8C00E91012 /* CryptThreeApp.swift in Sources */,
 				66A1A5322843B25900E91012 /* CoinDataService.swift in Sources */,
 				66A1A52A28424B8000E91012 /* Double.swift in Sources */,

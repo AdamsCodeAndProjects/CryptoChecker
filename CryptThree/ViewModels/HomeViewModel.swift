@@ -13,6 +13,7 @@ class HomeViewModel: ObservableObject {
     
     @Published var allCoins: [CoinModel] = []
     @Published var portfolioCoins: [CoinModel] = []
+    @Published var searchTerm: String = ""
     
     private let dataService = CoinDataService()
     private var cancellables = Set<AnyCancellable>()
@@ -28,4 +29,18 @@ class HomeViewModel: ObservableObject {
             }
             .store(in: &cancellables)
     }
+    
+//    func load() {
+//        fetchStocks()
+//    }
+//
+//    private func fetchStocks() {
+//        CoinDataService().getCoins { coins in
+//            if let coins = coins {
+//                DispatchQueue.main.async {
+//                    self.coins = coins.map(StockVM.init)
+//                }
+//            }
+//        }
+//    }
 }

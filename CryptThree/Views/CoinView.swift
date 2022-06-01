@@ -16,6 +16,7 @@ struct CoinView: View {
             
             // Left Side
             Text(coin.name)
+                .padding(.leading, 10)
             
             Spacer()
             

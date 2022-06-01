@@ -4,7 +4,6 @@
 //
 //  Created by adam janusewski on 5/29/22.
 //
-//  MVVM - All Data on the Home Screen needs to be on its own view models
 
 import SwiftUI
 
@@ -15,7 +14,23 @@ struct FullCoinView: View {
     var body: some View {
         
         ZStack {
+            
             VStack {
+                HStack {
+                    Text(getDate())
+                        .fontWeight(.bold)
+                        .offset(y: -80)
+                        .font(.custom("Arial", size: 25))
+                        .foregroundColor(Color.gray)
+                        .padding(.leading, 20)
+                        .padding(.bottom, 0)
+                    
+                    Spacer()
+                }
+                
+                SearchView(searchTerm: self.$vm.searchTerm)
+                    .offset(y: -70)
+                Spacer()
                 
                 HStack {
                     Text("Coin")
@@ -39,9 +54,23 @@ struct FullCoinView: View {
                 Rectangle()
                     .ignoresSafeArea()
                     .foregroundColor(Color.white)
-                    .frame(width: 200, height: 255)
+                    .frame(width: 200, height: 25)
+                
+//                    .navigationBarTitle(getDate())
             }
         }
+    }
+    
+    func getDate() -> String {
+        let date = Date()
+        let calendar = Calendar.current
+        let day = calendar.component(.day, from: date)
+//        let month = calendar.component(.month, from: date)
+        let names = Calendar.current.monthSymbols
+        let month = Calendar.current.component(.month, from: date)
+        let year = calendar.component(.year, from: date)
+        let theDate = ("\(names[month - 1]) \(day), \(year)")
+        return theDate
     }
 }
 
